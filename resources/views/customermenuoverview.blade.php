@@ -1,6 +1,9 @@
-<?php $__env->startSection('title','Company Menu'); ?>
+@extends('layout')
 
-<?php $__env->startSection('content'); ?>
+
+@section('title','Company Menu')
+
+@section('content')
     <br><br>
 
     <div class="container">
@@ -8,7 +11,7 @@
             <div class="col-md-12">
 
                 <div class="card mb-3" >
-                    <img src="<?php echo e(asset('/img/pizza1.jpg')); ?>" class="card-img-top" style=" height: 200px; object-fit: cover" alt="...">
+                    <img src="{{ asset('/img/pizza1.jpg') }}" class="card-img-top" style=" height: 200px; object-fit: cover" alt="...">
                     <div class="card-body">
                         <h3 class="card-title" id="company_name">Pizza Bada Bing</h3>
                         <p class="card-text">Pizzeria Bada Bing a luat naștere în anul 2010 din dorința de a oferi brașovenilor gustul savuros al pizzei italiene la un preț accesibil oricui. Acestor două ingrediente li s-a adăugat un al treilea - dumneavoastră, clientul, care alegeți calitatea produselor noastre, astfel ne-am creat un renume într-un timp foarte scurt, în ciuda concurenței acerbe de pe piața brașoveană, prin calitatea și diversitatea preparatelor, prin profesionalismul de care dăm dovadă, și nu în ultimul rând datorită prețului corect al produselor noastre.</p>
@@ -27,7 +30,7 @@
 
                         <div class="card md-3" style="max-width: 540px;">
                             <div class="row no-gutters">
-                                <div class="col-4 itemimage" style="background-image: url(<?php echo e(asset('/img/pizza2.jpg')); ?>)">
+                                <div class="col-4 itemimage" style="background-image: url({{ asset('/img/pizza2.jpg') }})">
 
                                 </div>
                                 <div class="col-8">
@@ -49,7 +52,7 @@
 
                         <div class="card md-3" style="max-width: 540px;">
                             <div class="row no-gutters">
-                                <div class="col-4 itemimage" style="background-image: url(<?php echo e(asset('/img/pizza1.jpg')); ?>)">
+                                <div class="col-4 itemimage" style="background-image: url({{ asset('/img/pizza1.jpg') }})">
 
                                 </div>
                                 <div class="col-8">
@@ -134,6 +137,4 @@
 
     <br>
 
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\PizzaMap\resources\views/customermenuoverview.blade.php ENDPATH**/ ?>
+@endsection
