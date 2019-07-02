@@ -11,7 +11,7 @@
                 <h1 class="card-title display-1" style="font-size: 8vw">Pizza Map</h1>
                 <h4 class="card-text" style="font-size: 3vw">Cauta cea mai buna pizza din oras!</h4>
 
-                    <div class="d-flex justify-content-center size="2vw">
+                    <div class="d-flex justify-content-center size=2vw">
                                 <div class="searchbar">
                             <input class="search_input" type="text" name="" placeholder="Search...">
                             <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
@@ -40,7 +40,7 @@
             <h4 class="card-title" id="company_name"><?php echo e($company->company_name); ?></h4>
             <p class="card-text" id="company_description"><?php echo e($company->company_description); ?></p>
             <p class="card-text"><small class="text-muted"><?php echo e($company->working_hours); ?></small></p>
-            <a href="#" class="btn btn-primary">See the menu</a>
+            <a href="/companyoverview/<?php echo e($company->id); ?>" class="btn btn-primary">See the menu</a>
         </div>
     </div><br>
      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
