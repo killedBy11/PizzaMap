@@ -11112,6 +11112,12 @@ html {
   background-color: #FF851B;
 }
 
+.itemimage {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .searchbar {
   margin-top: 2%;
   background-color: #ffffff;
@@ -11155,5 +11161,31 @@ html {
           align-items: center;
   border-radius: 50%;
   color: #ff9600;
+}
+
+@media screen and (max-width: 600px) {
+  .search_icon .fa-search {
+    font-size: 10px;
+  }
+}
+
+.search_input::-webkit-input-placeholder {
+  color: red;
+}
+
+.search_input::-moz-placeholder {
+  color: red;
+}
+
+.search_input:-ms-input-placeholder {
+  color: red;
+}
+
+.search_input::-ms-input-placeholder {
+  color: red;
+}
+
+.search_input::placeholder {
+  color: red;
 }
 
