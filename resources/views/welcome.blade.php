@@ -43,7 +43,7 @@
             <h4 class="card-title" id="company_name">{{$company->company_name}}</h4>
             <p class="card-text" id="company_description">{{$company->company_description}}</p>
             <p class="card-text"><small class="text-muted">{{$company->working_hours}}</small></p>
-            <a href="#" class="btn btn-primary">See the menu</a>
+            <a href="/companyoverview/{{$company->id}}" class="btn btn-primary">See the menu</a>
         </div>
     </div><br>
      @endforeach
