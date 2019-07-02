@@ -11108,6 +11108,10 @@ html {
   padding: 0;
 }
 
+.card-header {
+  background-color: #FF851B;
+}
+
 .searchbar {
   margin-top: 2%;
   background-color: #ffffff;
