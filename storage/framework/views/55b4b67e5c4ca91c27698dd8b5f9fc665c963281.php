@@ -44,6 +44,8 @@
         </div>
     </div><br>
      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+     <?php echo e($companies->links()); ?>
+
             </div></div></div>
 
 

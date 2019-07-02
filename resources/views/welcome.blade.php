@@ -47,6 +47,7 @@
         </div>
     </div><br>
      @endforeach
+     {{$companies->links()}}
             </div></div></div>
 
 
