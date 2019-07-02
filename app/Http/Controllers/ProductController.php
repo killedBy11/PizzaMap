@@ -7,6 +7,7 @@ use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -26,10 +27,12 @@ class ProductController extends Controller
         }else {
             return redirect('/access-denied');
         }
-        $path = $request->file('picture')->store('public/photos');
+        $file = $request -> file('picture');
+        $stored = Storage::disk('local')->put('public/pizzas', $file);
+        $path = Storage::url($stored);
         $product = Product::create([
             'company_id' => $company_id,
-            'name' => $request->get('name'),
+            'name' => $request->get('product_name'),
             'description' =>$request->get('description') ,
             'photo' => $path,
             'price' => $request->get('price'),
