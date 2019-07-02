@@ -16,8 +16,8 @@ Route::get('/', 'HomeController@landing')->name('landing');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/addmenu/{company_id}', 'ProductController@index');
-Route::post('/addmenu/{company_id}','ProductController@store');
+Route::get('/addmenu/{company_id}', 'ProductController@index')->name('getToAddMenuForm');
+Route::post('/addmenu/{company_id}','ProductController@store')->name('postToAddMenuForm');
 
 Route::get('/companyoverview/{company_id}', 'CompanyOverviewController@index');
 Route::get('/customermenuoverview', 'CustomerMenuOverview@index');

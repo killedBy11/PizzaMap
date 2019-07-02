@@ -7,7 +7,7 @@
                     <div class="card-header" style="background-color: #FF851B"><?php echo e(__('Add Menu Item')); ?></div>
 
                     <div class="card-body">
-                        <form method="POST" action="<?php echo e(route('register')); ?>">
+                        <form method="POST" enctype="multipart/form-data">
                             <?php echo csrf_field(); ?>
 
                             <div class="form-group row">
@@ -40,7 +40,7 @@ endif; ?>
 if (isset($message)) { $messageCache = $message; }
 $message = $errors->first('picture'); ?> is-invalid <?php unset($message);
 if (isset($messageCache)) { $message = $messageCache; }
-endif; ?>" name="gramaj" value="<?php echo e(old('picture')); ?>" required autocomplete="picture">
+endif; ?>" name="picture" value="<?php echo e(old('picture')); ?>" required autocomplete="picture">
 
                                     <?php if ($errors->has('picture')) :
 if (isset($message)) { $messageCache = $message; }
