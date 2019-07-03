@@ -11,7 +11,7 @@
             <div class="col-md-12">
 
                 <div class="card mb-3" >
-                    <img src="{{ asset($company->logo) }}" class="card-img-top" style=" height: 200px; object-fit: cover" alt="...">
+                    <img src="{{ asset($company->logo)}}" class="card-img-top" style=" height: 200px; object-fit: cover" alt="...">
                     <div class="card-body">
                         <h3 class="card-title" id="company_name">{{$company->company_name}}</h3>
                         <p class="card-text">{{$company->company_description}}</p>
@@ -92,14 +92,7 @@
                                 </li>
                             </ul>
 
-                            <form class="card p-2">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Promo code">
-                                    <div class="input-group-append">
-                                        <button type="submit" class="btn btn-secondary">Redeem</button>
-                                    </div>
-                                </div>
-                            </form>
+                            <a class="btn ml-2 btn-primary text-white">Checkout</a>
                         </div>
 
 

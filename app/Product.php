@@ -12,4 +12,7 @@ class Product extends Model
     public function company(){
         return $this->belongsTo('App\Company');
     }
+    public function orderItem(){
+        return $this->belongsTo('App\OrderItem');
+    }
 }

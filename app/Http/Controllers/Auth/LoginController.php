@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Company;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -27,7 +28,13 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected function redirectTo(){
+        $company = Company::where('user_id', Auth::user()->id)->first();
+        if($company != null){
+            return '/companyoverview/'. $company->id;
+        }
+        return '/';
+    }
 
     /**
      * Create a new controller instance.
@@ -40,6 +47,6 @@ class LoginController extends Controller
     }
     public function logout(Request $request) {
         Auth::logout();
-        return redirect('/login');
+        return redirect('/');
     }
 }
