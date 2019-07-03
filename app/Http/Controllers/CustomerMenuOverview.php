@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 
 class CustomerMenuOverview extends Controller
 {
-    public function index()
+    public function index($company_id)
     {
-
-        return view('customermenuoverview' );
+        $company = Company::find($company_id);
+        $products = Product::where('company_id', $company_id)->get();
+        return view('customermenuoverview', compact('company', 'products'));
     }
 }

@@ -13,10 +13,10 @@
                 <div class="card mb-3" >
                     <img src="{{ asset('/img/pizza1.jpg') }}" class="card-img-top" style=" height: 200px; object-fit: cover" alt="...">
                     <div class="card-body">
-                        <h3 class="card-title" id="company_name">Pizza Bada Bing</h3>
-                        <p class="card-text">Pizzeria Bada Bing a luat naștere în anul 2010 din dorința de a oferi brașovenilor gustul savuros al pizzei italiene la un preț accesibil oricui. Acestor două ingrediente li s-a adăugat un al treilea - dumneavoastră, clientul, care alegeți calitatea produselor noastre, astfel ne-am creat un renume într-un timp foarte scurt, în ciuda concurenței acerbe de pe piața brașoveană, prin calitatea și diversitatea preparatelor, prin profesionalismul de care dăm dovadă, și nu în ultimul rând datorită prețului corect al produselor noastre.</p>
-                        <p class="card-text">Str. Carpatilor Nr.56</p>
-                        <p class="card-text">L-V: 9-22  S-D: 10-20</p>
+                        <h3 class="card-title" id="company_name">{{$company->company_name}}</h3>
+                        <p class="card-text">{{$company->company_description}}</p>
+                        <p class="card-text">{{$company->address}}</p>
+                        <p class="card-text">{{$company->working_hours}}</p>
                     </div>
                 </div>
                 <br><br>
@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="col-lg-6">
 
-
+                        @foreach($products as $product)
                         <div class="card md-3" style="max-width: 540px;">
                             <div class="row no-gutters">
                                 <div class="col-4 itemimage" style="background-image: url({{ asset('/img/pizza2.jpg') }})">
@@ -35,9 +35,9 @@
                                 </div>
                                 <div class="col-8">
                                     <div class="card-body">
-                                        <h4 class="card-title" id="itemName">Pizza Grasu</h4>
-                                        <p class="card-text" id="itemDescription">Carne, Carne, Carne, Carne, Carne, Carne, Carne, Carne, Blat</p>
-                                        <p class="card-text"><small class="text-muted">25 LEI</small></p>
+                                        <h4 class="card-title" id="itemName">{{$product->name}}</h4>
+                                        <p class="card-text" id="itemDescription">{{$product->description}}</p>
+                                        <p class="card-text"><small class="text-muted">{{$product->price}} {{$product->currency}}</small></p>
                                         <a href="#" class="btn btn-primary">Add to cart</a>
                                     </div>
                                 </div>
@@ -46,27 +46,7 @@
 
 
                         <br>
-
-
-
-
-                        <div class="card md-3" style="max-width: 540px;">
-                            <div class="row no-gutters">
-                                <div class="col-4 itemimage" style="background-image: url({{ asset('/img/pizza1.jpg') }})">
-
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <h4 class="card-title" id="itemName">Pizza Grasu</h4>
-                                        <p class="card-text" id="itemDescription">Carne, Carne, Carne, Carne, Carne, Carne, Carne, Carne, Blat</p>
-                                        <p class="card-text"><small class="text-muted">25 LEI</small></p>
-                                        <a href="#" class="btn btn-primary">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
+                        @endforeach()
                     </div>
                     <div class="col-lg-6">
 
