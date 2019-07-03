@@ -11167,25 +11167,25 @@ html {
   .search_icon .fa-search {
     font-size: 10px;
   }
-}
 
-.search_input::-webkit-input-placeholder {
-  color: red;
-}
+  .search_input::-webkit-input-placeholder {
+    font-size: 10px;
+  }
 
-.search_input::-moz-placeholder {
-  color: red;
-}
+  .search_input::-moz-placeholder {
+    font-size: 10px;
+  }
 
-.search_input:-ms-input-placeholder {
-  color: red;
-}
+  .search_input:-ms-input-placeholder {
+    font-size: 10px;
+  }
 
-.search_input::-ms-input-placeholder {
-  color: red;
-}
+  .search_input::-ms-input-placeholder {
+    font-size: 10px;
+  }
 
-.search_input::placeholder {
-  color: red;
+  .search_input::placeholder {
+    font-size: 10px;
+  }
 }
 
