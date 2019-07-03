@@ -77,24 +77,8 @@
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
-
-
-                <br>
-=======
-                <div class="card-block  p-3">
-                    <h4 class="card-title" id="itemName"><?php echo e($item->name); ?></h4>
-                    <p class="card-text" id="itemDescription"><?php echo e($item->description); ?></p>
-                    <p class="card-text"><small class="text-muted"><?php echo e($item->price); ?><?php echo e($item->currency); ?></small></p>
-                    <a href="#" class="btn btn-primary">Edit Item</a>
-                    <form method="POST" style="display: inline-block;" action="/delete-item/<?php echo e($company->id); ?>/<?php echo e($item->id); ?>">
-                        <?php echo csrf_field(); ?>
-                        <input type="hidden" name="_method" value="delete" />
-                        <input type="submit" class="btn btn-primary" value="Delete"/>
-                    </form>
-                </div>
+                 
             </div>
->>>>>>> 5349bedb89747a51846cb671f82d1ab7e760c116
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div></div></div>
         </div>
