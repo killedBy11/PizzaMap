@@ -20,6 +20,6 @@ Route::get('/addmenu/{company_id}', 'ProductController@index')->name('getToAddMe
 Route::post('/addmenu/{company_id}','ProductController@store')->name('postToAddMenuForm');
 
 Route::get('/companyoverview/{company_id}', 'CompanyOverviewController@index');
-Route::get('/customermenuoverview', 'CustomerMenuOverview@index');
+Route::get('/menuoverview/{company_id}', 'CustomerMenuOverview@index');
 Route::get('/access-denied', 'HomeController@denied')->name('accessdenied');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
