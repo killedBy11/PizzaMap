@@ -48,7 +48,7 @@
             <h5 class="card-title">Company Description</h5>
             <p class="card-text" id="companyDescription"><?php echo e($company->company_description); ?></p>
             <hr/>
-            <a href="#" class="btn btn-primary">Edit Profile</a>
+            <a href="/editcompany/<?php echo e($company->id); ?>" class="btn btn-primary" >Edit Profile</a>
         </div>
 
         <div class="card-body" id="menuove" align="left">
