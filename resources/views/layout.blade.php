@@ -24,13 +24,13 @@
             </li>
             @guest
             <li class="nav-item">
-                <a class="btn ml-2 btn-primary" href="/register">Register</a></li>
+                <a class="btn ml-2 btn-primary" href="{{route("register")}}">Register</a></li>
             <li class="nav-item">
-                <a class="btn ml-2 btn-secondary" href="/login">Login</a></li>
+                <a class="btn ml-2 btn-secondary" href="{{route("login")}}">Login</a></li>
             @endguest
             @auth
             <li class="nav-item">
-                <a class="btn ml-2 btn-primary" href="/logout">Log out</a></li>
+                <a class="btn ml-2 btn-primary" href="{{route("logout")}}">Log out</a></li>
                 @if(App\Http\Controllers\HasCompany::hasCompany())
                 <li class="nav_item">
                     <a class="btn ml-2 btn-secondary" href="/companyoverview/{{App\Http\Controllers\HasCompany::hasCompany()->id}}">My Company</a></li>
