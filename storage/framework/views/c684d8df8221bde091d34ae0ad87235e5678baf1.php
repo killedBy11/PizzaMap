@@ -64,7 +64,11 @@
                     <p class="card-text" id="itemDescription"><?php echo e($item->description); ?></p>
                     <p class="card-text"><small class="text-muted"><?php echo e($item->price); ?><?php echo e($item->currency); ?></small></p>
                     <a href="#" class="btn btn-primary">Edit Item</a>
-                    <a href="#" class="btn btn-primary">Delete Item</a>
+                    <form method="POST" style="display: inline-block;" action="/delete-item/<?php echo e($company->id); ?>/<?php echo e($item->id); ?>">
+                        <?php echo csrf_field(); ?>
+                        <input type="hidden" name="_method" value="delete" />
+                        <input type="submit" class="btn btn-primary" value="Delete"/>
+                    </form>
                 </div>
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

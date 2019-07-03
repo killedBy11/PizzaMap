@@ -77,8 +77,10 @@ body,html{
     .search_icon .fa-search {
         font-size: 10px;
     }
+
+    .search_input::placeholder {
+        font-size: 10px;
+    }
 }
 
-.search_input::placeholder {
-    color: red;
-}
+

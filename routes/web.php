@@ -19,8 +19,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/addmenu/{company_id}', 'ProductController@index')->name('getToAddMenuForm');
 Route::post('/addmenu/{company_id}','ProductController@store')->name('postToAddMenuForm');
 
+
+Route::get('/companyoverview/{company_id}', 'CompanyOverviewController@index')->name('companyoverview');
+Route::get('/customermenuoverview', 'CustomerMenuOverview@index')->name('customermenuoverview');
+
 Route::get('/companyoverview/{company_id}', 'CompanyOverviewController@index');
-Route::get('/customermenuoverview', 'CustomerMenuOverview@index');
+Route::delete('/delete-item/{company_id}/{product_id}', 'CompanyOverviewController@deleteRequest');
+Route::get('/menuoverview/{company_id}', 'CustomerMenuOverview@index');
+
 Route::get('/access-denied', 'HomeController@denied')->name('accessdenied');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 //Company edit details

@@ -4,7 +4,7 @@
     <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -24,13 +24,13 @@
             </li>
             <?php if(auth()->guard()->guest()): ?>
             <li class="nav-item">
-                <a class="btn ml-2 btn-primary" href="/register">Register</a></li>
+                <a class="btn ml-2 btn-primary" href="<?php echo e(route("register")); ?>">Register</a></li>
             <li class="nav-item">
-                <a class="btn ml-2 btn-secondary" href="/login">Login</a></li>
+                <a class="btn ml-2 btn-secondary" href="<?php echo e(route("login")); ?>">Login</a></li>
             <?php endif; ?>
             <?php if(auth()->guard()->check()): ?>
             <li class="nav-item">
-                <a class="btn ml-2 btn-primary" href="/logout">Log out</a></li>
+                <a class="btn ml-2 btn-primary" href="<?php echo e(route("logout")); ?>">Log out</a></li>
                 <?php if(App\Http\Controllers\HasCompany::hasCompany()): ?>
                 <li class="nav_item">
                     <a class="btn ml-2 btn-secondary" href="/companyoverview/<?php echo e(App\Http\Controllers\HasCompany::hasCompany()->id); ?>">My Company</a></li>
@@ -100,8 +100,7 @@
                     <h3 class="footer-title">Subscribe Newsletter</h3>
                     <form>
                         <div class="newsletter-form">
-                            <input class="form-control" placeholder="Enter Your Email address" type="text">
-                            <button class="btn btn-default btn-sm" type="submit">Go</button>
+                            <input class="form-control" placeholder="Coming Soon" disabled>
                         </div>
                     </form>
                 </div>
