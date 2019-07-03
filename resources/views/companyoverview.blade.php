@@ -61,7 +61,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12">
              @foreach($items as $item)
-                            <div class="card md-3" >
+                            <div class="card md-3 shadoww" >
                                 <div class="row no-gutters">
                                     <div class="col-12 col-sm-2 itemimage" style="background-image: url({{ asset($item->photo) }}); min-width:150px; min-height:150px; height:auto">
                                     </div>

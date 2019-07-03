@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
 
-                <div class="card mb-3" >
+                <div class="card mb-3 shadow" >
                     <img src="<?php echo e(asset($company->logo)); ?>" class="card-img-top" style=" height: 200px; object-fit: cover" alt="...">
                     <div class="card-body">
                         <h3 class="card-title" id="company_name"><?php echo e($company->company_name); ?></h3>
@@ -25,7 +25,7 @@
                     <div class="col-lg-6">
 
                         <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="card md-3" >
+                        <div class="card md-3 shadoww" >
                                 <div class="row no-gutters">
                                     <div class="col-12 col-sm-2 itemimage" style="background-image: url(<?php echo e(asset($product->photo)); ?>); min-width:150px; min-height:150px; height:auto">
                                     </div>

@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-    <div class="card">
-        <img class="img-fluid card-img" src="{{ asset('img/pizzabg.jpg')}}" alt="Deer in nature">
-        <div class="card-img-overlay d-flex">
+    <div class="card border-0">
+        <div class="col-12 itemimage cover" style="background-image: url({{ asset('/img/pizzabg.jpg') }}); height:auto">
+
             <div class="my-auto mx-auto text-center text-white">
-                <h1 class="card-title display-1" style="font-size: 8vw">Pizza Map</h1>
-                <h4 class="card-text" style="font-size: 3vw">Cauta cea mai buna pizza din oras!</h4>
+                <h2 class="card-title covertextbig" >Pizza Map</h2>
+                <h4 class="card-text covertextsmall">Cauta cea mai buna pizza din oras!</h4>
+
 
                 <div class="d-flex justify-content-center size=2vw">
                     <div class="searchbar">
@@ -20,8 +21,8 @@
                         <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
                     </div>
                 </div>
-
             </div>
+
         </div>
     </div>
 
@@ -42,7 +43,7 @@
 
 
 
-                    <div class="card md-3" >
+                    <div class="card md-3 shadoww" >
                         <div class="row no-gutters">
                             <div class="col-12 col-sm-2 itemimage" style="background-image: url({{ asset($company->logo) }}); min-width:150px; min-height:150px; height:auto">
                             </div>

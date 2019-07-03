@@ -39,8 +39,8 @@
 
 
 
-                    <div class="card md-3" >
-                        <div class="row no-gutters">
+                    <div class="card md-3 shadoww" >
+                        <div class="row no-gutters ">
                             <div class="col-12 col-sm-2 itemimage" style="background-image: url({{ asset($company->logo) }}); min-width:150px; min-height:150px; height:auto">
                             </div>
                             <div class="col-12 col-sm-8">
