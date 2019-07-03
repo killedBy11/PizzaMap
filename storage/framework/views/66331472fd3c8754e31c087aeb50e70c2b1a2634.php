@@ -8,7 +8,7 @@
             <div class="col-md-12">
 
                 <div class="card mb-3" >
-                    <img src="<?php echo e(asset({{$company->logo); ?>) }}" class="card-img-top" style=" height: 200px; object-fit: cover" alt="...">
+                    <img src="<?php echo e(asset($company->logo)); ?>" class="card-img-top" style=" height: 200px; object-fit: cover" alt="...">
                     <div class="card-body">
                         <h3 class="card-title" id="company_name"><?php echo e($company->company_name); ?></h3>
                         <p class="card-text"><?php echo e($company->company_description); ?></p>
@@ -27,7 +27,7 @@
                         <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="card md-3" style="max-width: 540px;">
                             <div class="row no-gutters">
-                                <div class="col-4 itemimage" style="background-image: url(<?php echo e(asset({{$product->photo); ?>) }})">
+                                <div class="col-4 itemimage" style="background-image: url(<?php echo e(asset($product->photo)); ?>)">
 
                                 </div>
                                 <div class="col-8">
