@@ -73,13 +73,7 @@ endif; ?>
                                     <?php echo e(__('Login')); ?>
 
                                 </button>
-
-                                <?php if(Route::has('password.request')): ?>
-                                    <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
-                                        <?php echo e(__('Forgot Your Password?')); ?>
-
-                                    </a>
-                                <?php endif; ?>
+                                
                             </div>
                         </div>
                     </form>
