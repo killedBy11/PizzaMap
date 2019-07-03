@@ -100,8 +100,7 @@
                     <h3 class="footer-title">Subscribe Newsletter</h3>
                     <form>
                         <div class="newsletter-form">
-                            <input class="form-control" placeholder="Enter Your Email address" type="text">
-                            <button class="btn btn-default btn-sm" type="submit">Go</button>
+                            <input class="form-control" placeholder="Coming Soon" disabled>
                         </div>
                     </form>
                 </div>
