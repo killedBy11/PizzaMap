@@ -32,3 +32,18 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name(
 //Company edit details
 Route::get('/editcompany/{company_id}', 'EditCompany@index');
 Route::post('/editcompany/{company_id}', 'EditCompany@editCompany');
+
+
+
+
+
+
+
+
+
+
+
+
+//Edit menu Item
+Route::get('/editmenuitem/{company_id}/{product_id}','ProductController@editmenuitem');
+Route::post('/editmenuitem/{company_id}/{product_id}','ProductController@updateMenuItem');
