@@ -39,6 +39,6 @@ class ProductController extends Controller
             'currency' => $request->get('currency'),
             'gramaj' => $request->get('gramaj')
         ]);
-        return redirect('/home');
+        return redirect('/companyoverview/'. $company_id);
     }
 }
