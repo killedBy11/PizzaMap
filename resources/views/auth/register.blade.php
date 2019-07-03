@@ -64,7 +64,7 @@
 
                         <div class="form-group row">
                         <div class="checkbox col-md-4 col-form-label text-md-right">
-                            <label style="cursor: pointer; border: 1px solid Orange; background-color: Orange; padding: 5px; border-radius: 5px;"><input type="checkbox" id="check" name="check" value="true" style="display: none;" class="check">I have a pizza company</label>
+                            <label style="cursor: pointer; border: 1px solid Orange; background-color: Orange; padding: 5px; border-radius: 5px;"><input type="checkbox" id="check" name="check" value="true" style="display: none;" class="check"><span id="checkLabel">I have a pizza company</span></label>
                         </div>
                         </div>
 

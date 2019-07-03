@@ -11118,6 +11118,11 @@ html {
   background-repeat: no-repeat;
 }
 
+.nav-link,
+.nav-link:hover {
+  color: #000000;
+}
+
 .searchbar {
   margin-top: 2%;
   background-color: #ffffff;
@@ -11165,27 +11170,31 @@ html {
 
 @media screen and (max-width: 600px) {
   .search_icon .fa-search {
-    font-size: 10px;
+    font-size: 5px;
   }
 
   .search_input::-webkit-input-placeholder {
-    font-size: 10px;
+    font-size: 5px;
   }
 
   .search_input::-moz-placeholder {
-    font-size: 10px;
+    font-size: 5px;
   }
 
   .search_input:-ms-input-placeholder {
-    font-size: 10px;
+    font-size: 5px;
   }
 
   .search_input::-ms-input-placeholder {
-    font-size: 10px;
+    font-size: 5px;
   }
 
   .search_input::placeholder {
-    font-size: 10px;
+    font-size: 5px;
+  }
+
+  .search_input {
+    font-size: 5px;
   }
 }
 

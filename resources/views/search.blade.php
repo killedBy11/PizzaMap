@@ -14,28 +14,31 @@
                 <h1 class="card-title display-1" style="font-size: 8vw">Pizza Map</h1>
                 <h4 class="card-text" style="font-size: 3vw">Cauta cea mai buna pizza din oras!</h4>
 
-
-                    <div class="d-flex justify-content-center size=2vw">
-                                <div class="searchbar">
-                            <input class="search_input" type="text" name="" placeholder="Search...">
-                            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-                        </div>
+                <div class="d-flex justify-content-center size=2vw">
+                    <div class="searchbar">
+                        <input class="search_input" type="text" name="" placeholder="Search...">
+                        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
                     </div>
+                </div>
 
             </div>
         </div>
     </div>
 
-<br>
+    <br>
 
 
-    <div class="container">
+    <div class="container" id="result">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <h3>See the popular places in Brasov!</h3>
+                @if(!$companies)
+                <h3>No results found</h3>
+                @else
+                    <h3>Results:</h3>
+                @endif
                 <br>
 
-    @foreach($companies as $company)
+                @foreach($companies as $company)
 
 
 
@@ -53,8 +56,7 @@
                             </div>
                         </div>
                     </div><br>
-     @endforeach
-     {{$companies->links()}}
+                @endforeach
             </div></div></div>
 
 
@@ -66,3 +68,4 @@
 
 
 @endsection
+

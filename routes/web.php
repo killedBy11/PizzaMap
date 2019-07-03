@@ -28,3 +28,5 @@ Route::get('/menuoverview/{company_id}', 'CustomerMenuOverview@index');
 
 Route::get('/access-denied', 'HomeController@denied')->name('accessdenied');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
+Route::get('/search/{searchquery}', 'HomeController@search')->name('search');

@@ -28,12 +28,11 @@
                     <div class="col-lg-6">
 
                         @foreach($products as $product)
-                        <div class="card md-3" style="max-width: 540px;">
-                            <div class="row no-gutters">
-                                <div class="col-4 itemimage" style="background-image: url({{ asset($product->photo) }})">
-
-                                </div>
-                                <div class="col-8">
+                        <div class="card md-3" >
+                                <div class="row no-gutters">
+                                    <div class="col-12 col-sm-2 itemimage" style="background-image: url({{ asset($product->photo) }}); min-width:150px; min-height:150px; height:auto">
+                                    </div>
+                                    <div class="col-12 col-sm-7">
                                     <div class="card-body">
                                         <h4 class="card-title" id="itemName">{{$product->name}}</h4>
                                         <p class="card-text" id="itemDescription">{{$product->description}}</p>
@@ -48,11 +47,12 @@
                         <br>
                         @endforeach()
                     </div>
+                    <br>
                     <div class="col-lg-6">
 
 
 
-                        <div class="col-md-8 order-md-6 mb-8 float-right">
+                        <div class="col-md-8 col-6-sm order-md-6 mb-8 float-right">
                             <h4 class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="text-muted">Your cart</span>
                                 <span class="badge badge-secondary badge-pill">3</span>

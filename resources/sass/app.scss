@@ -26,7 +26,9 @@ body,html{
     background-repeat: no-repeat;
 }
 
-
+.nav-link ,.nav-link:hover{
+    color: #000000;
+}
 
 .searchbar{
     margin-top: 2%;
@@ -75,11 +77,15 @@ body,html{
 
 @media screen and (max-width: 600px) {
     .search_icon .fa-search {
-        font-size: 10px;
+        font-size: 5px;
     }
 
     .search_input::placeholder {
-        font-size: 10px;
+        font-size: 5px;
+    }
+
+    .search_input {
+        font-size: 5px;
     }
 }
 
