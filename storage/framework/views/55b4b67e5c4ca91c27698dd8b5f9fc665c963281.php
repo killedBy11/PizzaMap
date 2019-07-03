@@ -40,7 +40,7 @@
             <h4 class="card-title" id="company_name"><?php echo e($company->company_name); ?></h4>
             <p class="card-text" id="company_description"><?php echo e($company->company_description); ?></p>
             <p class="card-text"><small class="text-muted"><?php echo e($company->working_hours); ?></small></p>
-            <a href="/companyoverview/<?php echo e($company->id); ?>" class="btn btn-primary">See the menu</a>
+            <a href="/menuoverview/<?php echo e($company->id); ?>" class="btn btn-primary">See the menu</a>
         </div>
     </div><br>
      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
