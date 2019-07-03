@@ -31,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -73,6 +73,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 //        $path = $request->file('logo')->store('public/logos');
+        $this->redirectTo = '/';
         if(isset($data['check'])){
             $file = $request -> file('logo');
             $stored = Storage::disk('local')->put('public/logos', $file);
@@ -89,6 +90,7 @@ class RegisterController extends Controller
                 'user_id' => $user->id,
                 'logo' => $path
             ]);
+            $this->redirectTo = '/companyoverview/' . $company->id;
         }
         return $user;
     }

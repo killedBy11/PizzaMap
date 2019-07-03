@@ -15,4 +15,9 @@ class CompanyOverviewController extends Controller
         $items = Product::where('company_id', $company_id)->get();
         return view('companyoverview', compact('items', 'company'));
     }
+    public function deleteRequest(Request $request, $company_id, $product_id){
+        $item = Product::find($request->product_id);
+        $item->delete();
+        return redirect('/companyoverview/' . $company_id);
+    }
 }

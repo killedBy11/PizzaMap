@@ -24,6 +24,7 @@ Route::get('/companyoverview/{company_id}', 'CompanyOverviewController@index')->
 Route::get('/customermenuoverview', 'CustomerMenuOverview@index')->name('customermenuoverview');
 
 Route::get('/companyoverview/{company_id}', 'CompanyOverviewController@index');
+Route::delete('/delete-item/{company_id}/{product_id}', 'CompanyOverviewController@deleteRequest');
 Route::get('/menuoverview/{company_id}', 'CustomerMenuOverview@index');
 
 Route::get('/access-denied', 'HomeController@denied')->name('accessdenied');
