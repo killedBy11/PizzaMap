@@ -35,6 +35,7 @@
                                         <p class="card-text" id="itemDescription"><?php echo e($product->description); ?></p>
                                         <p class="card-text"><small class="text-muted"><?php echo e($product->price); ?> <?php echo e($product->currency); ?></small></p>
                                         <a href="#" class="btn btn-primary">Add to cart</a>
+                                        <a href="#" class="btn btn-danger">Remove from cart</a>
                                     </div>
                                 </div>
                             </div>
