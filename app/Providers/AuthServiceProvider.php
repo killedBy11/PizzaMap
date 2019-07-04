@@ -25,6 +25,10 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+        Gate::define('canAccessCompany', function ($user, $company) {
+            return $user->id == $company->user_id;
+        });
+
         //
     }
 }
