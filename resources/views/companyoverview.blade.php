@@ -65,7 +65,7 @@
                                 <div class="row no-gutters">
                                     <div class="col-12 col-sm-2 itemimage" style="background-image: url({{ asset($item->photo) }}); min-width:150px; min-height:150px; height:auto">
                                     </div>
-                                    <div class="col-12 col-sm-7">
+                                    <div class="col-12 col-sm-8">
                             <div class="card-body">
                                 <h4 class="card-title" id="itemName">{{$item->name}}</h4>
                                 <p class="card-text" id="itemDescription">{{$item->description}}</p>
@@ -81,9 +81,9 @@
                     </div>
                 </div>
                  
-            </div>
+            <br>
             @endforeach
-                    </div></div></div>
+                    </div></div></div></div>
         </div>
 
 
