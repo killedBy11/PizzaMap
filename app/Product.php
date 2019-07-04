@@ -15,4 +15,7 @@ class Product extends Model
     public function orderItem(){
         return $this->hasMany('App\OrderItem');
     }
+    public function checkedOrderItems(){
+        return $this->hasMany('App\CheckedOrderItem');
+    }
 }

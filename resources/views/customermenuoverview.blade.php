@@ -75,7 +75,7 @@
                                             $total+=$item->product->price * $item->quantity;
                                         @endphp
                                         <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                            <div>
+                                            <div style="width: 90%">
                                                 <h6 class="my-0">{{ $item->product->name }}</h6>
                                                 <small class="text-muted">{{ $item->product->description }}</small>
                                             </div>

@@ -21,4 +21,7 @@ class Company extends Model
     public function order(){
         return $this->hasMany('App\Order');
     }
+    public function checkedOrders(){
+        return $this->hasMany('App\CheckedOrder');
+    }
 }

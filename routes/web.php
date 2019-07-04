@@ -41,4 +41,9 @@ Route::post('/editmenuitem/{company_id}/{product_id}', 'ProductController@editSu
 
 Route::get('/add-to-cart/{company_id}/{product_id}', 'CartController@addItem')->middleware('auth');
 Route::get('/remove-from-cart/{company_id}/{product_id}', 'CartController@removeItem')->middleware('auth');
-Route::get('/checkout/{order_id}', 'CartController@checkout')->middleware('auth');
+Route::get('/order-placed/{order_id}', 'CartController@checkout')->middleware('auth');
+
+Route::get('/checkout/{order_id}', 'CheckoutController@getForm')->middleware('auth');
+Route::post('/checkout/{order_id}', 'CheckoutController@completeCheckout')->middleware('auth');
+
+Route::get('/myorders', 'OrdersController@displayUserOrders')->middleware('auth');
