@@ -275,7 +275,7 @@ endif; ?>
 if (isset($message)) { $messageCache = $message; }
 $message = $errors->first('company_description'); ?> is-invalid <?php unset($message);
 if (isset($messageCache)) { $message = $messageCache; }
-endif; ?>" name="company_description" value="<?php echo e(old('company_description')); ?>" id="company_description" autocomplete="company_description" autofocus>
+endif; ?>" name="company_description" maxlength="700" value="<?php echo e(old('company_description')); ?>" id="company_description" autocomplete="company_description" autofocus>
                                     </textarea>
                                     <?php if ($errors->has('company_description')) :
 if (isset($message)) { $messageCache = $message; }

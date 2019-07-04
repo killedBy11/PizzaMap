@@ -7,6 +7,9 @@
 
             <div class="my-auto mx-auto text-center text-white">
                 <h2 class="card-title covertextbig" >Pizza Map</h2>
+                <?php if(auth()->guard()->check()): ?>
+                    <h4 class="card-title covertextsmall" >Welcome <?php echo e(Illuminate\Support\Facades\Auth::user()->name); ?>!</h4>
+                <?php endif; ?>
                 <h4 class="card-text covertextsmall">Search for the best pizza in town!</h4>
 
 
@@ -54,8 +57,7 @@
             </div></div></div>
 
 
-    <br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
 
 
 

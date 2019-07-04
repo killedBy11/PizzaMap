@@ -38,7 +38,7 @@
                     <h3>Results:</h3>
                 @endif
                 <br>
-
+                    @if($companies)
                 @foreach($companies as $company)
 
 
@@ -58,8 +58,8 @@
                         </div>
                     </div><br>
                 @endforeach
+        @endif
             </div></div></div>
-
 
     <br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br>

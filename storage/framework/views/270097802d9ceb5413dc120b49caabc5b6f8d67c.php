@@ -26,9 +26,6 @@
 
     <div class="collapse navbar-collapse" id="navbar1">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
             <?php if(auth()->guard()->guest()): ?>
             <li class="nav-item">
                 <a class="btn ml-2 btn-primary" href="<?php echo e(route("register")); ?>">Register</a></li>

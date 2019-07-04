@@ -61,11 +61,12 @@
                                 <span class="text-muted">Your cart</span>
                                 <span class="badge badge-secondary badge-pill"><?php echo e($order ? $order->orderItem->count() : 0); ?></span>
                             </h4>
+                            <?php
+                                $total = 0;
+                            ?>
                             <ul class="list-group mb-3">
                                 <?php if($order): ?>
-                                    <?php
-                                        $total = 0;
-                                    ?>
+
                                     <?php $__currentLoopData = $order->orderItem; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <?php
                                             $total+=$item->product->price * $item->quantity;

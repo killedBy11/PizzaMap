@@ -9,7 +9,7 @@
 
             <div class="my-auto mx-auto text-center text-white">
                 <h2 class="card-title covertextbig" >Pizza Map</h2>
-                <h4 class="card-text covertextsmall">Cauta cea mai buna pizza din oras!</h4>
+                <h4 class="card-text covertextsmall">Search for the best pizza in town!</h4>
 
 
                 <div class="d-flex justify-content-center size=2vw">
@@ -35,7 +35,7 @@
                     <h3>Results:</h3>
                 <?php endif; ?>
                 <br>
-
+                    <?php if($companies): ?>
                 <?php $__currentLoopData = $companies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $company): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
 
@@ -47,16 +47,16 @@
                             <div class="col-12 col-sm-8">
                                 <div class="card-body">
                                     <h4 class="card-title" id="itemName"><?php echo e($company->company_name); ?></h4>
-                                    <p class="card-text" id="itemDescription"><?php echo e($company->company_description); ?></p>
-                                    <p class="card-text"><small class="text-muted"><?php echo e($company->working_hours); ?></small></p>
+                                    <p class="card-text" id="itemDescription"><i class="fas fa-sticky-note"></i> <?php echo e($company->company_description); ?></p>
+                                    <p class="card-text"><small class="text-muted"><i class="fas fa-clock"></i> <?php echo e($company->working_hours); ?></small></p>
                                     <a href="/menuoverview/<?php echo e($company->id); ?>" class="btn btn-primary">See the menu</a>
                                 </div>
                             </div>
                         </div>
                     </div><br>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        <?php endif; ?>
             </div></div></div>
-
 
     <br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br>

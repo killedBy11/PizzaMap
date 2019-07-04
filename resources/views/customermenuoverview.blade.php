@@ -64,11 +64,12 @@
                                 <span class="text-muted">Your cart</span>
                                 <span class="badge badge-secondary badge-pill">{{ $order ? $order->orderItem->count() : 0 }}</span>
                             </h4>
+                            @php
+                                $total = 0;
+                            @endphp
                             <ul class="list-group mb-3">
                                 @if($order)
-                                    @php
-                                        $total = 0;
-                                    @endphp
+
                                     @foreach($order->orderItem as $item)
                                         @php
                                             $total+=$item->product->price * $item->quantity;
