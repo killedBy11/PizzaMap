@@ -38,7 +38,10 @@
                                         <p class="card-text" id="itemDescription">{{$product->description}}</p>
                                         <p class="card-text"><small class="text-muted">{{$product->price}} {{$product->currency}}</small></p>
                                         @auth
-                                            <a href="#" class="btn btn-primary">Add to cart</a>
+                                            <a href="/add-to-cart/{{ $company->id }}/{{ $product->id }}" class="btn btn-primary">Add to cart</a>
+                                            @if($order && $order->orderItem()->where('product_id', $product->id)->first())
+                                                <a href="/remove-from-cart/{{ $company->id }}/{{ $product->id }}" class="btn btn-danger">Remove from cart</a>
+                                            @endif
                                         @else
                                             <a href="/login" class="btn btn-primary">Add to cart</a>
                                         @endauth
@@ -59,44 +62,35 @@
                         <div class="col-md-8 col-6-sm order-md-6 mb-8 float-right">
                             <h4 class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="text-muted">Your cart</span>
-                                <span class="badge badge-secondary badge-pill">3</span>
+                                <span class="badge badge-secondary badge-pill">{{ $order ? $order->orderItem->count() : 0 }}</span>
                             </h4>
                             <ul class="list-group mb-3">
-                                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                    <div>
-                                        <h6 class="my-0">Product name</h6>
-                                        <small class="text-muted">Brief description</small>
-                                    </div>
-                                    <span class="text-muted">$12</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                    <div>
-                                        <h6 class="my-0">Second product</h6>
-                                        <small class="text-muted">Brief description</small>
-                                    </div>
-                                    <span class="text-muted">$8</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                    <div>
-                                        <h6 class="my-0">Third item</h6>
-                                        <small class="text-muted">Brief description</small>
-                                    </div>
-                                    <span class="text-muted">$5</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between bg-light">
-                                    <div class="text-success">
-                                        <h6 class="my-0">Promo code</h6>
-                                        <small>EXAMPLECODE</small>
-                                    </div>
-                                    <span class="text-success">-$5</span>
-                                </li>
+                                @if($order)
+                                    @php
+                                        $total = 0;
+                                    @endphp
+                                    @foreach($order->orderItem as $item)
+                                        @php
+                                            $total+=$item->product->price * $item->quantity;
+                                        @endphp
+                                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                            <div>
+                                                <h6 class="my-0">{{ $item->product->name }}</h6>
+                                                <small class="text-muted">{{ $item->product->description }}</small>
+                                            </div>
+                                            <span class="text-muted">{{$item->quantity}} x {{ $item->product->price}} {{ $item->product->currency }}</span>
+                                        </li>
+                                    @endforeach
+                                @endif
                                 <li class="list-group-item d-flex justify-content-between">
                                     <span>Total (USD)</span>
-                                    <strong>$20</strong>
+                                    <strong>${{ $total }}</strong>
                                 </li>
                             </ul>
 
-                            <a class="btn ml-2 btn-primary text-white">Checkout</a>
+                            @if($order)
+                                <a href="/checkout/{{$order->id}}" class="btn ml-2 btn-primary text-white">Checkout</a>
+                            @endif
                         </div>
 
 

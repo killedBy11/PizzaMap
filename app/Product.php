@@ -13,6 +13,6 @@ class Product extends Model
         return $this->belongsTo('App\Company');
     }
     public function orderItem(){
-        return $this->belongsTo('App\OrderItem');
+        return $this->hasMany('App\OrderItem');
     }
 }

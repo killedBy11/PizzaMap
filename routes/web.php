@@ -38,3 +38,7 @@ Route::post('/editcompany/{company_id}', 'EditCompany@editCompany')->middleware(
 Route::post('/add-to-cart/{company_id}/{product_id}', 'CartController@addItem')->middleware('auth');
 Route::get('/editmenuitem/{company_id}/{product_id}', 'ProductController@editForm')->middleware(['auth', 'checkcompany']);
 Route::post('/editmenuitem/{company_id}/{product_id}', 'ProductController@editSubmit')->middleware(['auth', 'checkcompany']);
+
+Route::get('/add-to-cart/{company_id}/{product_id}', 'CartController@addItem')->middleware('auth');
+Route::get('/remove-from-cart/{company_id}/{product_id}', 'CartController@removeItem')->middleware('auth');
+Route::get('/checkout/{order_id}', 'CartController@checkout')->middleware('auth');
