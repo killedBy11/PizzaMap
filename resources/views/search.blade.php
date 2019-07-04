@@ -12,7 +12,7 @@
 
             <div class="my-auto mx-auto text-center text-white">
                 <h2 class="card-title covertextbig" >Pizza Map</h2>
-                <h4 class="card-text covertextsmall">Cauta cea mai buna pizza din oras!</h4>
+                <h4 class="card-text covertextsmall">Search for the best pizza in town!</h4>
 
 
                 <div class="d-flex justify-content-center size=2vw">
@@ -50,8 +50,8 @@
                             <div class="col-12 col-sm-8">
                                 <div class="card-body">
                                     <h4 class="card-title" id="itemName">{{$company->company_name}}</h4>
-                                    <p class="card-text" id="itemDescription">{{$company->company_description}}</p>
-                                    <p class="card-text"><small class="text-muted">{{$company->working_hours}}</small></p>
+                                    <p class="card-text" id="itemDescription"><i class="fas fa-sticky-note"></i> {{$company->company_description}}</p>
+                                    <p class="card-text"><small class="text-muted"><i class="fas fa-clock"></i> {{$company->working_hours}}</small></p>
                                     <a href="/menuoverview/{{$company->id}}" class="btn btn-primary">See the menu</a>
                                 </div>
                             </div>

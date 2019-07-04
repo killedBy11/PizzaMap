@@ -14,9 +14,9 @@
                     <img src="{{ asset($company->logo)}}" class="card-img-top" style=" height: 200px; object-fit: cover" alt="...">
                     <div class="card-body">
                         <h3 class="card-title" id="company_name">{{$company->company_name}}</h3>
-                        <p class="card-text">{{$company->company_description}}</p>
-                        <p class="card-text">{{$company->address}}</p>
-                        <p class="card-text">{{$company->working_hours}}</p>
+                        <p class="card-text"><i class="fas fa-sticky-note"></i> {{$company->company_description}}</p>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> {{$company->address}}</p>
+                        <p class="card-text"><i class="fas fa-clock"></i> {{$company->working_hours}}</p>
                     </div>
                 </div>
                 <br><br>
@@ -35,8 +35,8 @@
                                     <div class="col-12 col-sm-7">
                                     <div class="card-body">
                                         <h4 class="card-title" id="itemName">{{$product->name}}</h4>
-                                        <p class="card-text" id="itemDescription">{{$product->description}}</p>
-                                        <p class="card-text"><small class="text-muted">{{$product->price}} {{$product->currency}}</small></p>
+                                        <p class="card-text" id="itemDescription"><i class="fas fa-sticky-note"></i> {{$product->description}}</p>
+                                        <p class="card-text"><small class="text-muted"><i class="fas fa-money-bill"></i> {{$product->price}} {{$product->currency}}</small></p>
                                         @auth
                                             <a href="#" class="btn btn-primary">Add to cart</a>
                                         @else

@@ -49,7 +49,7 @@ class HomeController extends Controller
         }
         else
         {
-            $companies = [];
+            $companies = null;
         }
         return view('search', compact('companies'));
     }
