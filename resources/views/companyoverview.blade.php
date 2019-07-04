@@ -79,6 +79,17 @@
                                     </div>
                                 </div>
                                 </div>
+                                    <div class="col-12 col-sm-8">
+                            <div class="card-body">
+                                <h4 class="card-title" id="itemName">{{$item->name}}</h4>
+                                <p class="card-text" id="itemDescription">{{$item->description}}</p>
+                                <p class="card-text"><small class="text-muted">{{$item->price}} {{$item->currency}}</small></p>
+                                <a href="#" class="btn btn-primary">Edit Item</a>
+                                <form method="POST" style="display: inline-block;" action="/delete-item/{{$company->id}}/{{$item->id}}">
+                                    @csrf
+                                    <input type="hidden" name="_method" value="delete" />
+                                    <input type="submit" class="btn btn-primary" value="Delete"/>
+                                </form>
                             </div>
                             <br><br>
              @endforeach
@@ -86,6 +97,10 @@
                 </div>
             </div>
         </div>
+                 
+            <br>
+            @endforeach
+                    </div></div></div></div>
         </div>
 
 
