@@ -3,15 +3,22 @@
     <title><?php echo $__env->yieldContent('title'); ?></title>
     <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body background="<?php echo e(asset('/img/bg.png')); ?>">
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-orange" style="background-color: #FF851B">
+<nav class="navbar navbar-expand-lg navbar-light bg-orange" id="navbar"  style="background-color: #FF851B">
     <a class="navbar-brand" href="/"> <img class="logo" src=<?php echo e(asset('/img/pizza.svg')); ?> height="35"> PizzaMap</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
