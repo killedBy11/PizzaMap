@@ -36,3 +36,5 @@ Route::get('/editcompany/{company_id}', 'EditCompany@index')->middleware(['auth'
 Route::post('/editcompany/{company_id}', 'EditCompany@editCompany')->middleware(['auth', 'checkcompany']);
 
 Route::post('/add-to-cart/{company_id}/{product_id}', 'CartController@addItem')->middleware('auth');
+Route::get('/editmenuitem/{company_id}/{product_id}', 'ProductController@editForm')->middleware(['auth', 'checkcompany']);
+Route::post('/editmenuitem/{company_id}/{product_id}', 'ProductController@editSubmit')->middleware(['auth', 'checkcompany']);
