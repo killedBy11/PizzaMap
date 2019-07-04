@@ -49216,9 +49216,11 @@ var app = new Vue({
 
 function toogleState(checkVal) {
   if (checkVal) {
+    $('#checkLabel').text("I don't have a pizza company");
     $('#dummy').css('display', 'block');
     $("#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8, #c9").prop('required', true);
   } else {
+    $('#checkLabel').text("I have a pizza company");
     $('#dummy').css('display', 'none');
     $("#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8, #c9").prop('required', false);
   }
@@ -49229,7 +49231,7 @@ function triggerCheckbox(status) {
 }
 
 $('#dummy').css('display', 'none');
-$('.check').on('change', function () {
+$('#check').on('change', function () {
   var status = this.checked ? true : false;
   toogleState(status);
 }); //Menu Company
@@ -49246,6 +49248,15 @@ $('#cp').click(function () {
   $('#comprof').show();
   $("#cp").attr('class', 'nav-link active');
   $("#mo").attr('class', 'nav-link');
+}); //Search
+
+$('.search_icon').click(function () {
+  var searchquery = $('.search_input').val();
+  console.log(searchquery);
+
+  if (searchquery.length >= 3) {
+    window.location.replace('/search/' + searchquery + '#result');
+  }
 });
 
 /***/ }),
