@@ -58,11 +58,11 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12">
              <?php $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <div class="card md-3" >
+                            <div class="card md-3 shadoww" >
                                 <div class="row no-gutters">
                                     <div class="col-12 col-sm-2 itemimage" style="background-image: url(<?php echo e(asset($item->photo)); ?>); min-width:150px; min-height:150px; height:auto">
                                     </div>
-                                    <div class="col-12 col-sm-7">
+                                    <div class="col-12 col-sm-8">
                             <div class="card-body">
                                 <h4 class="card-title" id="itemName"><?php echo e($item->name); ?></h4>
                                 <p class="card-text" id="itemDescription"><?php echo e($item->description); ?></p>
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                  
-            </div>
+            </div><br>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div></div></div>
         </div>
