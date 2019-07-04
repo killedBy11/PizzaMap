@@ -37,7 +37,11 @@
                                         <h4 class="card-title" id="itemName">{{$product->name}}</h4>
                                         <p class="card-text" id="itemDescription">{{$product->description}}</p>
                                         <p class="card-text"><small class="text-muted">{{$product->price}} {{$product->currency}}</small></p>
-                                        <a href="#" class="btn btn-primary">Add to cart</a>
+                                        @auth
+                                            <a href="#" class="btn btn-primary">Add to cart</a>
+                                        @else
+                                            <a href="/login" class="btn btn-primary">Add to cart</a>
+                                        @endauth
                                     </div>
                                 </div>
                             </div>

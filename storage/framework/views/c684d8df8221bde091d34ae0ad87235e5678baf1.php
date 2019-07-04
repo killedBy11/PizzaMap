@@ -58,7 +58,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12">
              <?php $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <div class="card md-3" >
+                            <div class="card md-3 shadoww" >
                                 <div class="row no-gutters">
                                     <div class="col-12 col-sm-2 itemimage" style="background-image: url(<?php echo e(asset($item->photo)); ?>); min-width:150px; min-height:150px; height:auto">
                                     </div>

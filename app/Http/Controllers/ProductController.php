@@ -18,6 +18,9 @@ class ProductController extends Controller
 
     public function store(Request $request, $company_id)
     {
+        if(!Auth::check()){
+            return redirect('/access-denied');
+        }
         $user = Auth::user();
         $company = Company::find($company_id);
         if($company != null){

@@ -9,7 +9,6 @@
 
                 <div class="card mb-3 shadow" >
                     <img src="<?php echo e(asset($company->logo)); ?>" class="card-img-top" style=" height: 200px; object-fit: cover" alt="...">
-                    <img src="<?php echo e(asset($company->logo)); ?>" class="card-img-top" style=" height: 200px; object-fit: cover" alt="...">
                     <div class="card-body">
                         <h3 class="card-title" id="company_name"><?php echo e($company->company_name); ?></h3>
                         <p class="card-text"><?php echo e($company->company_description); ?></p>
@@ -35,7 +34,11 @@
                                         <h4 class="card-title" id="itemName"><?php echo e($product->name); ?></h4>
                                         <p class="card-text" id="itemDescription"><?php echo e($product->description); ?></p>
                                         <p class="card-text"><small class="text-muted"><?php echo e($product->price); ?> <?php echo e($product->currency); ?></small></p>
-                                        <a href="#" class="btn btn-primary">Add to cart</a>
+                                        <?php if(auth()->guard()->check()): ?>
+                                            <a href="#" class="btn btn-primary">Add to cart</a>
+                                        <?php else: ?>
+                                            <a href="/login" class="btn btn-primary">Add to cart</a>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
