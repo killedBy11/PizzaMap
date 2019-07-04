@@ -11242,10 +11242,12 @@ html {
 .covertextbig {
   font-size: 4rem;
   padding: 10px;
+  font-family: "Quicksand", sans-serif;
 }
 
 .covertextsmall {
   font-size: 1.5rem;
+  font-family: "Quicksand", sans-serif;
 }
 
 .coverimg {
