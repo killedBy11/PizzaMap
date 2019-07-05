@@ -30,7 +30,7 @@
                                 <label for="picture" class="col-md-4 col-form-label text-md-right">{{ __('Picture') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="picture" type="file" accept="image/jpg, image/png, image/svg" class="form-control @error('picture') is-invalid @enderror" name="picture" value="{{ old('picture') }}" required autocomplete="picture">
+                                    <input id="picture" type="file" accept="image/jpg, image/png, image/svg" class="form-control @error('picture') is-invalid @enderror" name="picture" value="{{ old('picture') }}" autocomplete="picture">
 
                                     @error('picture')
                                     <span class="invalid-feedback" role="alert">

@@ -45,14 +45,14 @@ class ProductController extends Controller
         return redirect('/companyoverview/'. $company_id);
     }
 
-    public function editForm($product_id, $company_id){
+    public function editForm($company_id, $product_id){
         $product = Product::find($product_id);
         if(!$product || $product->company_id != $company_id)
             return redirect('/access-denied');
         return view('editProduct', compact('product'));
     }
 
-    public function editSubmit(Request $request, $product_id, $company_id){
+    public function editSubmit(Request $request, $company_id, $product_id){
         $product = Product::find($product_id);
         if(!$product || $product->company_id != $company_id)
             return redirect('/access-denied');
