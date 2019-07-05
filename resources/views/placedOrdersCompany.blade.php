@@ -16,7 +16,7 @@
                                 </div>
                             @endif
 
-                            <div class="col-md-8 col-6-sm order-md-6 mb-8" style="display: inline-block; text-align: left;">
+                            <div id="toprint{{ $order->id }}" class="col-md-8 col-6-sm order-md-6 mb-8" style="display: inline-block; text-align: left;">
                                 <h6 class="d-flex justify-content-between align-items-center mb-3">
                                     <span class="text-muted">User name: {{ \App\User::find($order->user_id)->name  }}</span>
                                 </h6>
@@ -62,6 +62,7 @@
                                 </ul>
                             </div>
                             <div>
+                                <button data-theid="{{ $order->id }}" id="print" class="btn btn-secondary">Print</button>
                                 <form style="display: inline-block" action="/placed-orders/{{ $company_id }}/prev-status/{{ $order->id }}" method="POST">
                                     @csrf
                                     <input type="submit" class="btn btn-warning" value="Revert Status" {{ $order->status == 'waiting' ? 'disabled' : null }}/>

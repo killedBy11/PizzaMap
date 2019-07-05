@@ -49270,6 +49270,23 @@ window.onscroll = function() {
     prevScrollpos = currentScrollPos;
 }*/
 
+function testPdf(param) {
+  html2canvas($("#toprint" + param), {
+    onrendered: function onrendered(canvas) {
+      var imgData = canvas.toDataURL('image/png');
+      var doc = new jsPDF('landscape');
+      doc.addImage(imgData, 'PDF', 10, 10);
+      doc.autoPrint();
+      window.open(doc.output('bloburl'), '_blank');
+    }
+  });
+}
+
+$('#print').click(function () {
+  var id = $(this).data('theid');
+  testPdf(id);
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
