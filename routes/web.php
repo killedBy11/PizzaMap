@@ -46,4 +46,4 @@ Route::get('/order-placed/{order_id}', 'CartController@checkout')->middleware('a
 Route::get('/checkout/{order_id}', 'CheckoutController@getForm')->middleware('auth');
 Route::post('/checkout/{order_id}', 'CheckoutController@completeCheckout')->middleware('auth');
 
-Route::get('/myorders', 'OrdersController@displayUserOrders')->middleware('auth');
+Route::get('/myorders', 'OrdersController@displayUserOrders')->middleware('auth')->name('myorders');

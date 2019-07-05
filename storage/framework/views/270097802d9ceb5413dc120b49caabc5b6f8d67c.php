@@ -35,6 +35,7 @@
             <?php if(auth()->guard()->check()): ?>
             <li class="nav-item">
                 <a class="btn ml-2 btn-primary" href="<?php echo e(route("logout")); ?>">Log out</a></li>
+                <a class="btn ml-2 btn-info" href="<?php echo e(route("myorders")); ?>">My orders</a>
                 <?php if(App\Http\Controllers\HasCompany::hasCompany()): ?>
                 <li class="nav_item">
                     <a class="btn ml-2 btn-secondary" href="/companyoverview/<?php echo e(App\Http\Controllers\HasCompany::hasCompany()->id); ?>">My Company</a></li>
