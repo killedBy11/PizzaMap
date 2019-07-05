@@ -47,3 +47,8 @@ Route::get('/checkout/{order_id}', 'CheckoutController@getForm')->middleware('au
 Route::post('/checkout/{order_id}', 'CheckoutController@completeCheckout')->middleware('auth');
 
 Route::get('/myorders', 'OrdersController@displayUserOrders')->middleware('auth')->name('myorders');
+Route::get('/placed-orders/{company_id}', 'OrdersController@displayCompanyOrders')->middleware(['auth', 'checkcompany'])->name('placedorders');
+
+Route::delete('/placed-orders/{company_id}/delete-item/{order_id}', 'OrdersController@deleteCompanyOrder')->middleware(['auth', 'checkcompany']);
+Route::post('/placed-orders/{company_id}/prev-status/{order_id}', 'OrdersController@prevStatus')->middleware(['auth', 'checkcompany']);
+Route::post('/placed-orders/{company_id}/next-status/{order_id}', 'OrdersController@nextStatus')->middleware(['auth', 'checkcompany']);

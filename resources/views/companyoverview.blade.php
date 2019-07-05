@@ -12,6 +12,7 @@
 
     <div class="card text-center">
         <div class="card-header" style="background-color: #FF851B">
+            <a href="/placed-orders/{{$company->id}}" class="btn btn-secondary float-right">Placed Orders</a>
             <div class="card-title text-left">Company Menu</div>
             <ul class="nav nav-tabs card-header-tabs">
                 <li class="nav-item">

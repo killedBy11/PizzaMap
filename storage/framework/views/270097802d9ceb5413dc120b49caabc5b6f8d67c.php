@@ -27,15 +27,17 @@
     <div class="collapse navbar-collapse" id="navbar1">
         <ul class="navbar-nav ml-auto">
             <?php if(auth()->guard()->guest()): ?>
-            <li class="nav-item">
-                <a class="btn ml-2 btn-primary" href="<?php echo e(route("register")); ?>">Register</a></li>
-            <li class="nav-item">
-                <a class="btn ml-2 btn-secondary" href="<?php echo e(route("login")); ?>">Login</a></li>
+                <li class="nav-item">
+                    <a class="btn ml-2 btn-primary" href="<?php echo e(route("register")); ?>">Register</a></li>
+                <li class="nav-item">
+                    <a class="btn ml-2 btn-secondary" href="<?php echo e(route("login")); ?>">Login</a></li>
             <?php endif; ?>
             <?php if(auth()->guard()->check()): ?>
-            <li class="nav-item">
-                <a class="btn ml-2 btn-primary" href="<?php echo e(route("logout")); ?>">Log out</a></li>
-                <a class="btn ml-2 btn-info" href="<?php echo e(route("myorders")); ?>">My orders</a>
+                <li class="nav-item">
+                    <a class="btn ml-2 btn-primary" href="<?php echo e(route("logout")); ?>">Log out</a></li>
+                <li class="nav-item">
+                    <a class="btn ml-2 btn-info" href="<?php echo e(route("myorders")); ?>">My orders</a>
+                </li>
                 <?php if(App\Http\Controllers\HasCompany::hasCompany()): ?>
                 <li class="nav_item">
                     <a class="btn ml-2 btn-secondary" href="/companyoverview/<?php echo e(App\Http\Controllers\HasCompany::hasCompany()->id); ?>">My Company</a></li>
