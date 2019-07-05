@@ -16,7 +16,7 @@
                                 <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="address" type="text" class="form-control @error('email') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
+                                    <input id="address" required type="text" class="form-control @error('email') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
 
                                     @error('address')
                                     <span class="invalid-feedback" role="alert">
