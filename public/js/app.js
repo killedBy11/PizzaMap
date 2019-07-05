@@ -49257,6 +49257,34 @@ $('.search_icon').click(function () {
   if (searchquery.length >= 3) {
     window.location.replace('/search/' + searchquery + '#result');
   }
+}); ///NAVBAR
+
+/*var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+    } else {
+        document.getElementById("navbar").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+}*/
+
+function testPdf(param) {
+  html2canvas($("#toprint" + param), {
+    onrendered: function onrendered(canvas) {
+      var imgData = canvas.toDataURL('image/png');
+      var doc = new jsPDF('landscape');
+      doc.addImage(imgData, 'PDF', 10, 10);
+      doc.autoPrint();
+      window.open(doc.output('bloburl'), '_blank');
+    }
+  });
+}
+
+$('#print').click(function () {
+  var id = $(this).data('theid');
+  testPdf(id);
 });
 
 /***/ }),

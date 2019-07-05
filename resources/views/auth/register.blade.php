@@ -185,7 +185,7 @@
                                 <label for="company_description" class="col-md-4 col-form-label text-md-right">{{ __('Company Description') }}<span style="color:red">*</span></label>
 
                                 <div class="col-md-6">
-                                    <textarea type="text" class="form-control @error('company_description') is-invalid @enderror" name="company_description" value="{{ old('company_description') }}" id="company_description" autocomplete="company_description" autofocus>
+                                    <textarea type="text" class="form-control @error('company_description') is-invalid @enderror" name="company_description" maxlength="700" value="{{ old('company_description') }}" id="company_description" autocomplete="company_description" autofocus>
                                     </textarea>
                                     @error('company_description')
                                     <span class="invalid-feedback" role="alert">

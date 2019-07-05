@@ -35,7 +35,7 @@ class HomeController extends Controller
         return view('pizzaPage', compact('items'));
     }
     public function landing(){
-        $companies = Company::simplePaginate(10);
+        $companies = Company::orderBy('id', 'asc')->simplePaginate(10);
         return view('welcome', compact('companies'));
     }
     public function search(Request $request, $searchquery)
@@ -45,11 +45,14 @@ class HomeController extends Controller
         $companies=Company::query()
                             ->where("company_name", "LIKE", "%{$searchquery}%")
                             ->limit(20)
+                            ->orderBy('id', 'asc')
                             ->get();
+            if(sizeof($companies) == 0)
+                $companies = null;
         }
         else
         {
-            $companies = [];
+            $companies = null;
         }
         return view('search', compact('companies'));
     }
