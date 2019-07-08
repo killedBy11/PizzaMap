@@ -17,6 +17,10 @@ class CheckoutController extends Controller
 
     public function completeCheckout(Request $request, $order_id){
         $user = Auth::user();
+        $valRequest = $request->validate([
+            'address' => 'required|max:255',
+            'paymentMethod' => 'required',
+        ]);
         if(!$user)
             return redirect('/');
         $order = Order::find($order_id);
@@ -27,8 +31,8 @@ class CheckoutController extends Controller
         $checkedOrder = CheckedOrder::create([
             'company_id' => $order->company_id,
             'user_id' => $order->user_id,
-            'address' => $request->address,
-            'payment' => $request->paymentMethod,
+            'address' => $valRequest['address'],
+            'payment' => $valRequest['paymentMethod'],
             'status' => 'waiting'
         ]);
         $order_items = OrderItem::where('order_id', $order_id)->get();

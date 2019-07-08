@@ -51,10 +51,21 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $enabled = null;
+        if(isset($data['check']))
+            $enabled = 'required';
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'company_name' => [$enabled],
+            'contact_person_name' => [$enabled],
+            'address' => [$enabled],
+            'phone' => [$enabled, ($enabled ? 'numeric' : null)],
+            'email_company' => [$enabled, ($enabled ? 'email' : null)],
+            'website' => [$enabled, ($enabled ? 'url' : null)],
+            'working_hours' => [$enabled],
+            'company_description' => [$enabled],
         ]);
     }
 

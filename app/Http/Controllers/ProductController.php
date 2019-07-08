@@ -21,6 +21,13 @@ class ProductController extends Controller
         if(!Auth::check()){
             return redirect('/access-denied');
         }
+        $valRequest = $request->validate([
+            'product_name' => 'required|max:255',
+            'description' => 'required|max:255',
+            'price' => 'required|numeric',
+            'currency' => 'required|max:3|min:3',
+            'gramaj' => 'required|numeric',
+        ]);
         $user = Auth::user();
         $company = Company::find($company_id);
         if($company != null){
@@ -35,12 +42,12 @@ class ProductController extends Controller
         $path = Storage::url($stored);
         $product = Product::create([
             'company_id' => $company_id,
-            'name' => $request->get('product_name'),
-            'description' =>$request->get('description') ,
+            'name' => $valRequest['product_name'],
+            'description' =>$valRequest['description'],
             'photo' => $path,
-            'price' => $request->get('price'),
-            'currency' => $request->get('currency'),
-            'gramaj' => $request->get('gramaj')
+            'price' => $valRequest['price'],
+            'currency' => $valRequest['currency'],
+            'gramaj' => $valRequest['gramaj']
         ]);
         return redirect('/companyoverview/'. $company_id);
     }
@@ -56,11 +63,18 @@ class ProductController extends Controller
         $product = Product::find($product_id);
         if(!$product || $product->company_id != $company_id)
             return redirect('/access-denied');
-        $product->name = $request->product_name;
-        $product->description = $request->description;
-        $product->price = $request->price;
-        $product->currency = $request->currency;
-        $product->gramaj = $request->gramaj;
+        $valRequest = $request->validate([
+            'product_name' => 'required|max:255',
+            'description' => 'required|max:255',
+            'price' => 'required|numeric',
+            'currency' => 'required|max:3|min:3',
+            'gramaj' => 'required|numeric',
+        ]);
+        $product->name = $valRequest->product_name;
+        $product->description = $valRequest->description;
+        $product->price = $valRequest->price;
+        $product->currency = $valRequest->currency;
+        $product->gramaj = $valRequest->gramaj;
         if($request->file('picture'))
         {
             $file = $request->file('picture');
