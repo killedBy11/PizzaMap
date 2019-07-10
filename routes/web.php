@@ -35,14 +35,6 @@ Route::get('/search/{searchquery}', 'HomeController@search')->name('search');
 Route::get('/editcompany/{company_id}', 'EditCompany@index')->middleware(['auth', 'checkcompany']);
 Route::post('/editcompany/{company_id}', 'EditCompany@editCompany')->middleware(['auth', 'checkcompany']);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
-
 
 
 
@@ -51,9 +43,7 @@ Route::post('/editcompany/{company_id}', 'EditCompany@editCompany')->middleware(
 //Edit menu Item
 Route::get('/editmenuitem/{company_id}/{product_id}','ProductController@editmenuitem');
 Route::post('/editmenuitem/{company_id}/{product_id}','ProductController@updateMenuItem');
-=======
->>>>>>> 6778f95ce16b197cf1ae8472d8567eefc4030ba0
-=======
+
 Route::post('/add-to-cart/{company_id}/{product_id}', 'CartController@addItem')->middleware('auth');
 Route::get('/editmenuitem/{company_id}/{product_id}', 'ProductController@editForm')->middleware(['auth', 'checkcompany']);
 Route::post('/editmenuitem/{company_id}/{product_id}', 'ProductController@editSubmit')->middleware(['auth', 'checkcompany']);
@@ -71,4 +61,3 @@ Route::get('/placed-orders/{company_id}', 'OrdersController@displayCompanyOrders
 Route::delete('/placed-orders/{company_id}/delete-item/{order_id}', 'OrdersController@deleteCompanyOrder')->middleware(['auth', 'checkcompany']);
 Route::post('/placed-orders/{company_id}/prev-status/{order_id}', 'OrdersController@prevStatus')->middleware(['auth', 'checkcompany']);
 Route::post('/placed-orders/{company_id}/next-status/{order_id}', 'OrdersController@nextStatus')->middleware(['auth', 'checkcompany']);
->>>>>>> 6d9c3e1c3f1c17e703af84b1dd624d78bec2578b
