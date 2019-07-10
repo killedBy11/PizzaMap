@@ -27,11 +27,11 @@ class EditCompany extends Controller
             'company_name' => 'required|max:255',
             'contact_person_name' => 'required|max:255',
             'address' => 'required',
-            'phone' => 'required|numer[',
+            'phone' => 'required|numeric',
             'email_company' => 'required|email',
             'website' => 'required|url',
             'working_hours' => 'required',
-            'company_descriptionval' => 'required',
+            'company_description' => 'required',
         ]);
         if(Auth::user()->id==$company->user_id) {
 

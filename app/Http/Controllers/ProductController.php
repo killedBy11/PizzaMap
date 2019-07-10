@@ -70,11 +70,11 @@ class ProductController extends Controller
             'currency' => 'required|max:3|min:3',
             'gramaj' => 'required|numeric',
         ]);
-        $product->name = $valRequest->product_name;
-        $product->description = $valRequest->description;
-        $product->price = $valRequest->price;
-        $product->currency = $valRequest->currency;
-        $product->gramaj = $valRequest->gramaj;
+        $product->name = $valRequest['product_name'];
+        $product->description = $valRequest['description'];
+        $product->price = $valRequest['price'];
+        $product->currency = $valRequest['currency'];
+        $product->gramaj = $valRequest['gramaj'];
         if($request->file('picture'))
         {
             $file = $request->file('picture');
