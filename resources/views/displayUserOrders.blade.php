@@ -58,7 +58,11 @@
                                     </li>
                                 </ul>
                             </div>
-
+                            @if($order->status == "done")
+                                <div>
+                                    <a href="/resend-order/{{$order->id}}" class="btn btn-success">Resend Order</a>
+                                </div>
+                            @endif
                     </div>
                 </div>
             </div>

@@ -46,4 +46,31 @@ class CheckoutController extends Controller
         return redirect('/order-placed/'.$order_id);
     }
 
+    public function resendOrder($order_id){
+        $user = Auth::user();
+        $order = CheckedOrder::find($order_id);
+        if(!$user || !$order || $user->id != $order->user_id || $order->status != "done")
+            return redirect('/access-denied');
+        $order->status = "waiting";
+        $newOrder = Order::updateOrCreate([
+            'company_id' => $order->company_id,
+            'user_id' => $order->user_id,
+        ], [
+            'company_id' => $order->company_id,
+            'user_id' => $order->user_id,
+        ]);
+        $orderItems = CheckedOrderItem::where('checked_order_id', $order_id)->get();
+        $oldItems = OrderItem::where('order_id', $newOrder->id)->get();
+        foreach($oldItems as $item){
+            $item->delete();
+        }
+        foreach($orderItems as $item){
+            OrderItem::create([
+                'quantity' => $item->quantity,
+                'product_id' => $item->product_id,
+                'order_id' => $newOrder->id
+            ]);
+        }
+        return redirect('/checkout/' . $newOrder->id);
+    }
 }

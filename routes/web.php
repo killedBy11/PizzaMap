@@ -61,3 +61,5 @@ Route::get('/placed-orders/{company_id}', 'OrdersController@displayCompanyOrders
 Route::delete('/placed-orders/{company_id}/delete-item/{order_id}', 'OrdersController@deleteCompanyOrder')->middleware(['auth', 'checkcompany']);
 Route::post('/placed-orders/{company_id}/prev-status/{order_id}', 'OrdersController@prevStatus')->middleware(['auth', 'checkcompany']);
 Route::post('/placed-orders/{company_id}/next-status/{order_id}', 'OrdersController@nextStatus')->middleware(['auth', 'checkcompany']);
+
+Route::get('/resend-order/{order_id}', 'CheckoutController@resendOrder')->middleware('auth');
