@@ -11,7 +11,7 @@
                         <?php echo csrf_field(); ?>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Name')); ?></label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Name')); ?><span style="color:red">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control <?php if ($errors->has('name')) :
@@ -33,7 +33,7 @@ endif; ?>
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right"><?php echo e(__('E-Mail Address')); ?></label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right"><?php echo e(__('E-Mail Address')); ?><span style="color:red">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control <?php if ($errors->has('email')) :
@@ -55,7 +55,7 @@ endif; ?>
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Password')); ?></label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Password')); ?><span style="color:red">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control <?php if ($errors->has('password')) :
@@ -77,7 +77,7 @@ endif; ?>
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Confirm Password')); ?></label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Confirm Password')); ?><span style="color:red">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -86,7 +86,7 @@ endif; ?>
 
                         <div class="form-group row">
                         <div class="checkbox col-md-4 col-form-label text-md-right">
-                            <label style="cursor: pointer; border: 1px solid Orange; background-color: Orange; padding: 5px; border-radius: 5px;"><input type="checkbox" id="check" name="check" value="true" style="display: none;" class="check">I have a pizza company</label>
+                            <label style="cursor: pointer; border: 1px solid Orange; background-color: Orange; padding: 5px; border-radius: 5px;"><input type="checkbox" id="check" name="check" value="true" style="display: none;" class="check"><span id="checkLabel">I have a pizza company</span></label>
                         </div>
                         </div>
 
@@ -95,7 +95,7 @@ endif; ?>
 
 
                         <div class="form-group row">
-                            <label for="company_name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Company Name')); ?></label>
+                            <label for="company_name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Company Name')); ?><span style="color:red">*</span></label>
 
                             <div class="col-md-6">
                                 <input type="text" id="company_name" class="form-control <?php if ($errors->has('company_name')) :
@@ -117,7 +117,7 @@ endif; ?>
                         </div>
 
                             <div class="form-group row">
-                                <label for="contact_person_name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Contact Person Name')); ?></label>
+                                <label for="contact_person_name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Contact Person Name')); ?><span style="color:red">*</span></label>
 
                                 <div class="col-md-6">
                                     <input type="text" id="contact_person_name" class="form-control <?php if ($errors->has('contact_person_name')) :
@@ -139,7 +139,7 @@ endif; ?>
                             </div>
 
                             <div class="form-group row">
-                                <label for="address" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Address')); ?></label>
+                                <label for="address" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Address')); ?><span style="color:red">*</span></label>
 
                                 <div class="col-md-6">
                                     <textarea type="text" rows="2" class="form-control <?php if ($errors->has('address')) :
@@ -162,7 +162,7 @@ endif; ?>
 
 
                             <div class="form-group row">
-                                <label for="phone" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Phone')); ?></label>
+                                <label for="phone" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Phone')); ?><span style="color:red">*</span></label>
 
                                 <div class="col-md-6">
                                     <input type="tel" class="form-control <?php if ($errors->has('phone')) :
@@ -183,7 +183,7 @@ endif; ?>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="email_company" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Company E-Mail')); ?></label>
+                                <label for="email_company" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Company E-Mail')); ?><span style="color:red">*</span></label>
 
                                 <div class="col-md-6">
                                     <input type="email" class="form-control <?php if ($errors->has('email')) :
@@ -204,7 +204,7 @@ endif; ?>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="website" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Website')); ?></label>
+                                <label for="website" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Website')); ?><span style="color:red">*</span></label>
 
                                 <div class="col-md-6">
                                     <input type="url" class="form-control <?php if ($errors->has('url')) :
@@ -225,7 +225,7 @@ endif; ?>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="working_hours" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Working Hours')); ?></label>
+                                <label for="working_hours" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Working Hours')); ?><span style="color:red">*</span></label>
 
                                 <div class="col-md-6">
                                     <textarea rows="9" type="text" class="form-control <?php if ($errors->has('working_hours')) :
@@ -247,7 +247,7 @@ endif; ?>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="logo" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Logo')); ?></label>
+                                <label for="logo" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Logo')); ?><span style="color:red">*</span></label>
 
                                 <div class="col-md-6">
                                     <input type="file" accept="image/jpg, image/png, image/svg" class="form-control <?php if ($errors->has('logo')) :
@@ -268,7 +268,7 @@ endif; ?>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="company_description" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Company Description')); ?></label>
+                                <label for="company_description" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Company Description')); ?><span style="color:red">*</span></label>
 
                                 <div class="col-md-6">
                                     <textarea type="text" class="form-control <?php if ($errors->has('company_description')) :
@@ -289,6 +289,10 @@ endif; ?>
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body">
+                                <p class="col-md-6 col-form-label text-md-right"><span style="color:red">*</span>All fields are required</p>
+                        </div>
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

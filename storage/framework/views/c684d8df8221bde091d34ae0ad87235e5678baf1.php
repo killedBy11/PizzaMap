@@ -54,7 +54,11 @@
         <div class="card-body" id="menuove" align="left">
             <a href="/addmenu/<?php echo e($company->id); ?>" class="btn btn-primary">Add Menu Item</a>
             <br><br>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
              <?php $__currentLoopData = $items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+<<<<<<< HEAD
             <div class="card flex-row flex-wrap">
                 <div class="card-header border-0" style=" width: 200px; height: 200px;">
                     <img src="<?php echo e(asset($item->photo)); ?>" style="width: 100%;height: 100%;" alt="">
@@ -69,11 +73,32 @@
                         <input type="hidden" name="_method" value="delete" />
                         <input type="submit" class="btn btn-primary" value="Delete"/>
                     </form>
+=======
+                            <div class="card md-3" >
+                                <div class="row no-gutters">
+                                    <div class="col-12 col-sm-2 itemimage" style="background-image: url(<?php echo e(asset($item->photo)); ?>); min-width:150px; min-height:150px; height:auto">
+                                    </div>
+                                    <div class="col-12 col-sm-7">
+                            <div class="card-body">
+                                <h4 class="card-title" id="itemName"><?php echo e($item->name); ?></h4>
+                                <p class="card-text" id="itemDescription"><?php echo e($item->description); ?></p>
+                                <p class="card-text"><small class="text-muted"><?php echo e($item->price); ?> <?php echo e($item->currency); ?></small></p>
+                                <a href="#" class="btn btn-primary">Edit Item</a>
+                                <form method="POST" style="display: inline-block;" action="/delete-item/<?php echo e($company->id); ?>/<?php echo e($item->id); ?>">
+                                    <?php echo csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="delete" />
+                                    <input type="submit" class="btn btn-primary" value="Delete"/>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+>>>>>>> 6778f95ce16b197cf1ae8472d8567eefc4030ba0
                 </div>
+                 
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </div></div></div>
         </div>
-
 
 
     </div>

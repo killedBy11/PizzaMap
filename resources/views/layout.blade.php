@@ -46,78 +46,86 @@
 
 
 <!-- footer -->
-<div class="footer bg-silver">
-    <br>
+<footer class="nb-footer">
     <div class="container">
         <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                <div class="ft-logo"><img src={{ asset('img/pizza.svg') }} height="50" alt="">  PizzaMap</div>
+            <div class="col-sm-12">
+                <div class="about">
+                    <img src="{{asset("/img/pizza.svg")}}" class="img-responsive center-block" style="max-height: 100px" alt="">
+                    <p>Aici scriem despre noi scriem despre noi scriem despre noi scriem despre noi scriem despre noi scriem despre noi scriem despre noi scriem despre noi scriem despre noi scriem despre noi scriem despre noi scriem despre noi.</p>
+
+                    {{--<div class="social-media">
+                        <ul class="list-inline">
+                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>--}}
+                </div>
             </div>
-        </div>
-        <hr class="footer-line">
-        <div class="row">
-            <!-- footer-about -->
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
-                <div class="footer-widget ">
-                    <div class="footer-title">Company</div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-info-single">
+                    <h2 class="title">Help Center</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Legal & Privacy</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Delivery Info</a></li>
                     </ul>
                 </div>
             </div>
-            <!-- /.footer-about -->
-            <!-- footer-links -->
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
-                <div class="footer-widget ">
-                    <div class="footer-title">Quick Links</div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-info-single">
+                    <h2 class="title">Customer information</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> About Us</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sell Your Items</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> RSS</a></li>
                     </ul>
                 </div>
             </div>
-            <!-- /.footer-links -->
-            <!-- footer-links -->
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
-                <div class="footer-widget ">
-                    <div class="footer-title">Social</div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-info-single">
+                    <h2 class="title">Security & privacy</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Google +</a></li>
-                        <li><a href="#">Linked In</a></li>
-                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Terms Of Use</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Privacy Policy</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Return / Refund Policy</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Store Locations</a></li>
                     </ul>
                 </div>
             </div>
-            <!-- /.footer-links -->
-            <!-- footer-links -->
-            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-6 col-6 ">
-                <div class="footer-widget ">
-                    <h3 class="footer-title">Subscribe Newsletter</h3>
-                    <form>
-                        <div class="newsletter-form">
-                            <input class="form-control" placeholder="Coming Soon" disabled>
-                        </div>
-                    </form>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-info-single">
+                    <h2 class="title">Help Center</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
+                        <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Delivery Info</a></li>
+                    </ul>
                 </div>
             </div>
-            <!-- /.footer-links -->
-            <!-- tiny-footer -->
-        </div>
-        <div class="row ">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center ">
-                <div class="tiny-footer">
-                    <p>Copyright © All Rights Reserved 2025 | PizzaMap and Pentalog </p>
-                </div>
-            </div>
-            <!-- /. tiny-footer -->
-        </div>
     </div>
-</div>
+
+    <section class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>Copyright © 2019. PizzaMap.</p>
+                </div>
+                <div class="col-sm-12"></div>
+            </div>
+        </div>
+    </section>
+</footer>
 <!-- /.footer -->
 <script src="{{ asset('js/app.js') }}"></script>
 </body>

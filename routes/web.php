@@ -29,10 +29,15 @@ Route::get('/menuoverview/{company_id}', 'CustomerMenuOverview@index');
 
 Route::get('/access-denied', 'HomeController@denied')->name('accessdenied');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
+
+Route::get('/search/{searchquery}', 'HomeController@search')->name('search');
+
 //Company edit details
 Route::get('/editcompany/{company_id}', 'EditCompany@index');
 Route::post('/editcompany/{company_id}', 'EditCompany@editCompany');
 
+<<<<<<< HEAD
 
 
 
@@ -47,3 +52,5 @@ Route::post('/editcompany/{company_id}', 'EditCompany@editCompany');
 //Edit menu Item
 Route::get('/editmenuitem/{company_id}/{product_id}','ProductController@editmenuitem');
 Route::post('/editmenuitem/{company_id}/{product_id}','ProductController@updateMenuItem');
+=======
+>>>>>>> 6778f95ce16b197cf1ae8472d8567eefc4030ba0

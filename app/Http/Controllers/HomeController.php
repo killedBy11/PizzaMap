@@ -38,4 +38,19 @@ class HomeController extends Controller
         $companies = Company::simplePaginate(10);
         return view('welcome', compact('companies'));
     }
+    public function search(Request $request, $searchquery)
+    {
+        if(strlen($searchquery) >= 3)
+        {
+        $companies=Company::query()
+                            ->where("company_name", "LIKE", "%{$searchquery}%")
+                            ->limit(20)
+                            ->get();
+        }
+        else
+        {
+            $companies = [];
+        }
+        return view('search', compact('companies'));
+    }
 }

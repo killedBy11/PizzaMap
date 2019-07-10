@@ -15,32 +15,36 @@
                 <h4 class="card-text covertextsmall">Cauta cea mai buna pizza din oras!</h4>
 
 
-                    <div class="d-flex justify-content-center size=2vw">
-                                <div class="searchbar">
-                            <input class="search_input" type="text" name="" placeholder="Search...">
-                            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-                        </div>
+                <div class="d-flex justify-content-center size=2vw">
+                    <div class="searchbar">
+                        <input class="search_input" type="text" name="" placeholder="Search...">
+                        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
                     </div>
+                </div>
             </div>
 
-            </div>
         </div>
+    </div>
 
-<br>
+    <br>
 
 
-    <div class="container">
+    <div class="container" id="result">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <h3>See the popular places in Brasov!</h3>
+                @if(!$companies)
+                <h3>No results found</h3>
+                @else
+                    <h3>Results:</h3>
+                @endif
                 <br>
 
-    @foreach($companies as $company)
+                @foreach($companies as $company)
 
 
 
                     <div class="card md-3 shadoww" >
-                        <div class="row no-gutters ">
+                        <div class="row no-gutters">
                             <div class="col-12 col-sm-2 itemimage" style="background-image: url({{ asset($company->logo) }}); min-width:150px; min-height:150px; height:auto">
                             </div>
                             <div class="col-12 col-sm-8">
@@ -53,8 +57,7 @@
                             </div>
                         </div>
                     </div><br>
-     @endforeach
-     {{$companies->links()}}
+                @endforeach
             </div></div></div>
 
 
@@ -66,3 +69,4 @@
 
 
 @endsection
+
