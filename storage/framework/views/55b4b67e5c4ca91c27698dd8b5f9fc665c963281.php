@@ -43,7 +43,7 @@
                             </div>
                             <div class="col-12 col-sm-8">
                                 <div class="card-body">
-                                    <h4 class="card-title" id="itemName"><?php echo e($company->company_name); ?></h4>
+                                    <h4 class="card-title" id="itemName"><?php echo e($company->company_name); ?>  <small class="ratestar">★</small><small style="font-size: 15px">4.46/5</small></h4>
                                     <p class="card-text" id="itemDescription"><i class="fas fa-sticky-note"></i> <?php echo e($company->company_description); ?></p>
                                     <p class="card-text"><small class="text-muted"><i class="fas fa-clock"></i> <?php echo e($company->working_hours); ?></small></p>
                                     <a href="/menuoverview/<?php echo e($company->id); ?>" class="btn btn-primary">See the menu</a>

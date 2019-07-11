@@ -239,3 +239,59 @@ footer.nb-footer .copyright p {
     margin: 0;
     padding: 0; }
 ////
+
+
+
+.ratestar{
+    font-size: 20px; color: #ff851b;
+}
+
+.ratestarbig{
+    font-size: 30px; color: #ff851b;
+}
+
+
+@media screen and (min-width: 400px) {
+    .ratebutton {
+        float: right;
+        //top: 5px;
+        //right: 10px;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .revbutton {
+        float: right;
+        //top: 5px;
+        //right: 10px;
+    }
+}
+
+
+.animated {
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    transition: height 0.2s;
+}
+
+.starrating > input {display: none;}  /* Remove radio buttons */
+
+.starrating > label:before {
+    content: "\f005"; /* Star */
+    margin: 2px;
+    font-size: 2em;
+    font-family: FontAwesome;
+    display: inline-block;
+    float: left;
+}
+
+.starrating > label
+{
+    color: #212529; /* Start color when not clicked */
+}
+
+.starrating > input:checked ~ label
+{ color: #ff851b; } /* Set yellow color when star checked */
+
+.starrating > input:hover ~ label
+{ color: #ff851b;  } /* Set yellow color when star hover */

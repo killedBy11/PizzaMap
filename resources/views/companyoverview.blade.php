@@ -62,27 +62,9 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12">
              @foreach($items as $item)
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div class="card flex-row flex-wrap">
-                <div class="card-header border-0" style=" width: 200px; height: 200px;">
-                    <img src="{{ asset($item->photo) }}" style="width: 100%;height: 100%;" alt="">
-                </div>
-                <div class="card-block  p-3">
-                    <h4 class="card-title" id="itemName">{{$item->name}}</h4>
-                    <p class="card-text" id="itemDescription">{{$item->description}}</p>
-                    <p class="card-text"><small class="text-muted">{{$item->price}}{{$item->currency}}</small></p>
-                    <a href="/editmenuitem/{{$company->id}}/{{$item->id}}" class="btn btn-primary">Edit Item</a>
-                    <form method="POST" style="display: inline-block;" action="/delete-item/{{$company->id}}/{{$item->id}}">
-                        @csrf
-                        <input type="hidden" name="_method" value="delete" />
-                        <input type="submit" class="btn btn-primary" value="Delete"/>
-                    </form>
-=======
-                            <div class="card md-3 shadoww" >
-=======
+
                         <div class="card md-3 shadoww" >
->>>>>>> 6d9c3e1c3f1c17e703af84b1dd624d78bec2578b
+
                                 <div class="row no-gutters">
                                     <div class="col-12 col-sm-2 itemimage" style="background-image: url({{ asset($item->photo) }}); min-width:150px; min-height:150px; height:auto">
                                     </div>
@@ -104,13 +86,12 @@
                  <br>
                  @endforeach
                     </div>
-<<<<<<< HEAD
->>>>>>> 6778f95ce16b197cf1ae8472d8567eefc4030ba0
+
                 </div>
-=======
+
             </div>
         </div>
->>>>>>> 6d9c3e1c3f1c17e703af84b1dd624d78bec2578b
+
                  
             <br>
         </div>

@@ -189,7 +189,7 @@ endif; ?>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="company_description" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Company Description')); ?></label>
+                                    <label for="company_description" maxlength="500" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Company Description')); ?></label>
 
                                     <div class="col-md-6">
                                     <textarea type="text" class="form-control <?php if ($errors->has('company_description')) :
