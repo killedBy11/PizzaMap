@@ -21,4 +21,9 @@ class CustomerMenuOverview extends Controller
         }
         return view('customermenuoverview', compact('company', 'products', 'order'));
     }
+
+    public function reviewPost(Request $request, $company_id){
+        dd($request);
+        return redirect('/menuoverview/'.$company_id);
+    }
 }

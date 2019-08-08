@@ -24,6 +24,7 @@ Route::get('/companyoverview/{company_id}', 'CompanyOverviewController@index')->
 
 Route::delete('/delete-item/{company_id}/{product_id}', 'CompanyOverviewController@deleteRequest')->middleware(['auth', 'checkcompany']);
 Route::get('/menuoverview/{company_id}', 'CustomerMenuOverview@index');
+Route::post('/menuoverview/{company_id}', 'CustomerMenuOverview@reviewPost')->middleware('auth');
 
 Route::get('/access-denied', 'HomeController@denied')->name('accessdenied');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');

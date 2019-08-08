@@ -121,12 +121,11 @@
                         <div class="row" id="post-review-box" style="display:none;">
                             <div class="col-md-12">
                                 <form accept-charset="UTF-8" action="" method="post">
+                                    @csrf
                                     <input id="ratings-hidden" name="rating" type="hidden">
-                                    <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5"></textarea>
+                                    <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5" required></textarea>
 
                                     <div class="text-right">
-
-
                                         <div class="starrating risingstar d-flex justify-content-left flex-row-reverse">
                                             <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 star"></label>
                                             <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 star"></label>

@@ -46,4 +46,7 @@ class User extends Authenticatable
     public function checkedOrders(){
         return $this->hasMany('App\CheckedOrder');
     }
+    public function reviews(){
+        return $this->hasMany('App\Review');
+    }
 }
